@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="menuBarPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itheima.controller.MenuBarController">
+   <children>
+       <MenuBar layoutY="2.0">
+          <menus>
+              <Menu mnemonicParsing="false" text="图书管理">
+                 <items>
+                     <MenuItem mnemonicParsing="false" onAction="#showBooks" text="图书信息" />
+                     <MenuItem mnemonicParsing="false" onAction="#showRecords" text="借阅记录" />
+                 </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="用户管理">
+                 <items>
+                     <MenuItem mnemonicParsing="false" onAction="#editUserInfo" text="修改用户信息" />
+                     <MenuItem mnemonicParsing="false" onAction="#editPassword" text="修改密码" />
+                 </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="登录管理">
+                 <items>
+                     <MenuItem mnemonicParsing="false" onAction="#logout" text="退出登录" />
+                     <MenuItem mnemonicParsing="false" onAction="#exitApp" text="退出系统" />
+                 </items>
+      
+              </Menu>
+          </menus>
+   
+       </MenuBar>
+   </children>
+
+</Pane>

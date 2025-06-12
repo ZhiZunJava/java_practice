@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="recordPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itheima.controller.RecordController">
+   <children>
+       <fx:include source="menubar.fxml" />
+      <Pane layoutY="45.0" prefHeight="66.0" prefWidth="600.0" style="-fx-border-color: #97c7da;">
+         <children>
+            <Label layoutX="30.0" layoutY="-8.0" style="-fx-background-color: white;" text="借阅记录查询" textFill="#ee0e07e3">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <TextField fx:id="recBookName" layoutX="143.0" layoutY="19.0" prefHeight="23.0" prefWidth="237.0" promptText="请输入查询的书名" />
+            <Button layoutX="407.0" layoutY="19.0" mnemonicParsing="false" onAction="#showRecords" text="查询" />
+         </children>
+      </Pane>
+      <Pane layoutX="1.0" layoutY="126.0" prefHeight="250.0" prefWidth="600.0" style="-fx-border-color: #97c7da;">
+         <children>
+            <Label layoutX="26.0" layoutY="-8.0" style="-fx-background-color: white;" text="借阅记录列表" textFill="#ee0d01">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <ScrollPane layoutX="8.0" layoutY="14.0" prefHeight="235.0" prefWidth="591.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="226.0" prefWidth="584.0">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="227.0" prefWidth="591.0">
+                          <columns>
+                            <TableColumn prefWidth="45.0" text="编号" />
+                            <TableColumn prefWidth="154.0" text="书名" />
+                              <TableColumn prefWidth="74.0" text="借阅者" />
+                              <TableColumn prefWidth="157.0" text="借阅时间" />
+                              <TableColumn prefWidth="157.0" text="归还时间" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</Pane>

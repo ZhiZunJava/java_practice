@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itheima.controller.UserInfoController">
+    <children>
+        <fx:include source="menubar.fxml" />
+        <Pane fx:id="userInfoPane" layoutY="45.0" prefHeight="352.0" prefWidth="600.0" style="-fx-border-color: #97c7da;">
+            <children>
+                <Label layoutX="30.0" layoutY="-7.0" style="-fx-background-color: white;" text="个人信息" textFill="#ee0e07e3">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+                <Label layoutX="41.0" layoutY="49.0" text="手机号：" />
+                <Label layoutX="53.0" layoutY="82.0" text="性别：" />
+                <TextField fx:id="infoTel" layoutX="107.0" layoutY="45.0" />
+                <Button layoutX="149.0" layoutY="124.0" mnemonicParsing="false" onAction="#editUserInfo" text="修改" />
+            <RadioButton layoutX="108.0" layoutY="82.0" mnemonicParsing="false" selected="true" text="男">
+               <toggleGroup>
+                  <ToggleGroup fx:id="infoGender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="159.0" layoutY="82.0" mnemonicParsing="false" text="女" toggleGroup="$infoGender" />
+            <Label fx:id="infoTelLab" layoutX="267.0" layoutY="49.0" />
+            </children>
+        </Pane>
+    </children>
+</Pane>

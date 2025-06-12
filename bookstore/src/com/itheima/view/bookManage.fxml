@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="bookPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itheima.controller.BookController">
+   <children>
+       <fx:include source="menubar.fxml" />
+      <Pane layoutY="45.0" prefHeight="66.0" prefWidth="600.0" style="-fx-border-color: #97c7da;">
+         <children>
+            <Label layoutX="30.0" layoutY="-8.0" style="-fx-background-color: white;" text="图书查询" textFill="#ee0e07e3">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <ComboBox fx:id="seachState" layoutX="24.0" layoutY="19.0" prefHeight="23.0" prefWidth="96.0" />
+            <TextField fx:id="bookVo" layoutX="143.0" layoutY="19.0" prefHeight="23.0" prefWidth="237.0" promptText="请输入查询的书名" />
+            <Button layoutX="407.0" layoutY="19.0" mnemonicParsing="false" onAction="#searchBooks" text="查询" />
+         </children>
+      </Pane>
+      <Pane layoutX="1.0" layoutY="126.0" prefHeight="148.0" prefWidth="600.0" style="-fx-border-color: #97c7da;">
+         <children>
+            <Label layoutX="26.0" layoutY="-8.0" style="-fx-background-color: white;" text="图书列表" textFill="#ee0d01">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <ScrollPane layoutX="8.0" layoutY="14.0" prefHeight="129.0" prefWidth="591.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="127.0" prefWidth="584.0">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="129.0" prefWidth="591.0">
+                          <columns>
+                            <TableColumn prefWidth="45.0" text="编号" />
+                            <TableColumn prefWidth="154.0" text="书名" />
+                              <TableColumn prefWidth="74.0" text="作者" />
+                              <TableColumn prefWidth="312.0" text="简介" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Pane fx:id="addOrEditPane" layoutX="1.0" layoutY="287.0" prefHeight="110.0" prefWidth="600.0" style="-fx-border-color: #97c7da;" visible="false">
+         <children>
+            <Label layoutX="26.0" layoutY="-8.0" style="-fx-background-color: white;" text="图书添加\修改" textFill="#eb0303">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label layoutX="34.0" layoutY="18.0" text="书名：" />
+            <Label layoutX="257.0" layoutY="19.0" text="作者：" />
+            <TextField fx:id="bookname" layoutX="73.0" layoutY="15.0" prefHeight="23.0" prefWidth="152.0" />
+            <TextField fx:id="author" layoutX="297.0" layoutY="15.0" prefHeight="23.0" prefWidth="96.0" />
+            <Label layoutX="418.0" layoutY="19.0" text="状态：" />
+            <ComboBox fx:id="editState" layoutX="462.0" layoutY="14.0" prefHeight="23.0" prefWidth="96.0" />
+            <TextField fx:id="des" layoutX="74.0" layoutY="48.0" prefHeight="23.0" prefWidth="319.0" />
+            <Label layoutX="35.0" layoutY="51.0" text="简介" />
+            <Button fx:id="addBookBt" layoutX="160.0" layoutY="79.0" mnemonicParsing="false" onAction="#addBook" text="添加" />
+            <Button fx:id="editBookBt" layoutX="308.0" layoutY="79.0" mnemonicParsing="false" onAction="#editBook" text="修改" />
+            <Label fx:id="bid" layoutX="421.0" layoutY="52.0" text="编号" visible="false" />
+            <Label layoutX="225.0" layoutY="20.0" text="*" textFill="#f50000" />
+            <Label layoutX="393.0" layoutY="20.0" text="*" textFill="#f50505" />
+         </children>
+      </Pane>
+      <Pane fx:id="lendPane" layoutX="2.0" layoutY="287.0" prefHeight="110.0" prefWidth="600.0" style="-fx-border-color: #97c7da;">
+         <children>
+            <Label layoutX="26.0" layoutY="-8.0" style="-fx-background-color: white;" text="图书借阅\归还" textFill="#eb0303">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="18.0" text="书名：" />
+            <Label layoutX="334.0" layoutY="19.0" text="作者：" />
+            <TextField fx:id="lendBookname" disable="true" layoutX="73.0" layoutY="15.0" prefHeight="23.0" prefWidth="152.0" />
+            <TextField fx:id="lendAuthor" disable="true" layoutX="374.0" layoutY="15.0" prefHeight="23.0" prefWidth="96.0" />
+            <TextField fx:id="lendDes" disable="true" layoutX="74.0" layoutY="48.0" prefHeight="23.0" prefWidth="397.0" />
+            <Label layoutX="35.0" layoutY="51.0" text="简介" />
+            <Button fx:id="lendBookBt" layoutX="209.0" layoutY="79.0" mnemonicParsing="false" onAction="#lendBook" text="借阅" />
+            <Label fx:id="lendBid" layoutX="78.0" layoutY="83.0" visible="false" />
+            <Button fx:id="returnBookBt" layoutX="273.0" layoutY="79.0" mnemonicParsing="false" onAction="#returnBook" text="归还" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

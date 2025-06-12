@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="practiceTwoDay" />
         <module name="practiceFiveDay" />
+        <module name="practiceTwoDay" />
         <module name="practiceOneDay" />
         <module name="practiceThereDay" />
         <module name="practiceFourDay" />
